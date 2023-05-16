@@ -1,0 +1,234 @@
+/* VARIABLES */
+/* barlow-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/barlow-v12-latin-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+    url('../fonts/barlow-v12-latin-regular.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* barlow-700 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/barlow-v12-latin-700.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+    url('../fonts/barlow-v12-latin-700.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  
+  /* fraunces-regular - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Fraunces';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/fraunces-v31-latin-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+    url('../fonts/fraunces-v31-latin-regular.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* fraunces-900 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Fraunces';
+    font-style: normal;
+    font-weight: 900;
+    src: url('../fonts/fraunces-v31-latin-900.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+    url('../fonts/fraunces-v31-latin-900.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  :root{
+     --main-font-family: "Fraunces", "Times New Roman", serif;
+     --main-fraunces-font-weight: 900;
+     --main-font-weight: 700;
+     --main-text-color: #fefcf7;
+     --main-second-text-color: #333d4b;
+     --main-line-height: 25px;
+     --main-bg-color: #0e8784;
+  }
+  
+  /* GENERAL */
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  html{
+    height: 100%;
+  }
+  
+  img{
+    display: block;
+    height: auto;
+  }
+  
+  body{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Barlow", "Arial" , sans-serif;
+    font-weight: 400;
+    color: #f2f2f2;
+  }
+  
+  
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+  
+  /* CONTAINER */
+  
+  .container{
+    max-width: 1240px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+  
+  /* STICKY-FOOTER */
+  .site-main{
+    flex-grow: 1;
+  }
+
+                /*  Header section  */
+.site-header {
+  padding-top: 32px;
+  padding-bottom: 40px;
+}
+
+.site-header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-header__menu {
+  width: 16px;
+  height: 15px;
+  border: none;
+  background-color: transparent;
+  background-image: url("./images/dropdownimg.svg");
+}
+
+.nav {
+  display: none;
+}
+
+
+@media only screen and (min-width: 550px) {
+
+  .site-header__menu {
+    display: none;
+  }
+  
+  .nav {
+    display: block;
+  }
+  
+  .nav__list {
+    display: flex;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+  }
+  
+  .nav__items:not(:last-child) {
+    margin-right: 33px;
+  }
+  
+  .nav__link {
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: var(--main-font-weight);
+    letter-spacing: 0.923077px;
+    color: #83888f;
+    text-decoration-line: none;
+    transition: 0.3s ease;
+  }
+
+  .nav__link:hover{
+    color: var(--main-second-text-color);
+  }
+}
+
+@media only screen and (min-width: 700px) {
+    
+  .site-header {
+    padding-top: 40px;
+    padding-bottom: 55px;
+  }
+  
+  .logo__img {
+    width: 236px;
+    height: 26px;
+  }
+}
+
+                 /*  Hero section  */
+.hero__wrapper {
+  padding: 100px 24px 99px 24px;
+  background-image: url("./images/phonesbgimg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  background-color:  #a2a2a2;
+}
+
+.hero__textbox {
+  margin: 0 auto;
+  max-width: 279px;
+  width: 100%;
+  text-align: center;
+}
+
+.hero__title {
+  font-family: var(--main-font-family);
+  font-weight: var(--main-fraunces-font-weight);
+  font-size: 32px;
+  line-height: 40px;
+  margin-top: 0;
+  margin-bottom: 24px;
+  color: var(--main-text-color);
+}
+
+.hero__text {
+  margin-top: 0;
+  margin-bottom: 39px;
+  font-size: 12px;
+  line-height: 25px;
+  color: var(--main-text-color);
+  mix-blend-mode: normal;
+  opacity: 0.8;
+}
+
+.hero__link {
+  display: inline-block;
+  padding: 16px 31px;
+  font-family: var(--main-font-family);
+  font-weight: var(--main-fraunces-font-weight);
+  font-size: 18px;
+  line-height: 25px;
+  color: var(--main-text-color);
+  text-decoration: none;
+  background-color: var(--main-bg-color);
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+
+.hero__link:hover{
+  background-color:  #66d2cf;
+}
