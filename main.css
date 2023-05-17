@@ -308,10 +308,6 @@
 }
 
         /*  Card section  */
-.card {
-  padding-bottom: 120px;
-}
-
 .card__textbox-wrapper {
   padding: 64px 24px 28px 24px;
   background-color: #2c343e;
@@ -320,7 +316,7 @@
 }
 
 .card__textbox {
-  min-width: 279px;
+  max-width: 279px;
   width: 100%;
   margin: 0 auto;
 }
@@ -431,6 +427,55 @@
   color: var(--main-text-color);
 }
 
+@media only screen and (min-width: 700px) {
+  .card__wrapper {
+    padding-top: 42px;
+    padding-right: 58px;
+    padding-left: 58px;
+  }
+
+  .card__textbox {
+    max-width: 540px;
+    width: 100%;
+  }
+
+  .card__items {
+    max-width: 573px;
+    width: 100%;
+    padding: 41px 48px 41px 181px;
+  }
+
+  .card__items--initial::before {
+    position: absolute;
+    left: 140px;
+  }
+
+  .card__items--middle::before {
+    position: absolute;
+    left: 140px;
+  }
+
+  .card__items--last::before {
+    position: absolute;
+    left: 140px;
+  }
+
+  .card__inner-textbox {
+    max-width: 344px;
+    width: 100%;
+  }
+
+  .card__title {
+    margin-top: 0;
+    margin-bottom: 16px;
+    text-align: left;
+  }
+
+  .card__text {
+    text-align: left;
+  }  
+}
+
            /*  Feedback  section   */
 .feedback {
   padding-top: 500px;
@@ -470,6 +515,11 @@
   color: #fdd6ba;
 }
 
+.feedback__textbox {
+  max-width: 327px;
+  width: 100%;
+}
+
 .feedback__title {
   margin-top: 0;
   margin-bottom: 24px;
@@ -505,6 +555,10 @@
 }
 
 @media only screen and (min-width: 700px) {
+  .feedback {
+    padding-top: 144px;
+  }
+
   .feedback__heading {
     padding-bottom: 40px;
     text-align: left;
@@ -556,4 +610,40 @@
   .feedback__link {
     transform: translateX(0);
   }
+}
+
+
+          /*   Footer    */
+.footer {
+  padding: 54px 55px;
+  background-color: #2c343e;
+}
+
+.footer__list {
+  display: block;
+  margin-top: 49px;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style-type: none;
+  text-align: center;
+}
+
+.footer__items:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.footer__link {
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: var(--main-font-weight);
+  letter-spacing: 0.923077px;
+  color: #83888f;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.footer__items--last {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 51px;
 }
