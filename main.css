@@ -971,7 +971,7 @@
 }
 
 
-           /*   About page   */
+           /*   About page   */  /*  Second page  */
 
 .about {
   padding-bottom: 120px;
@@ -1010,7 +1010,11 @@
   opacity: 0.8;
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 600px) {
+  .about {
+    padding-bottom: 144px;
+  }
+
   .about__wrapper {
     padding-top: 118px;
     padding-bottom: 118px;
@@ -1029,5 +1033,33 @@
     font-size: 32px;
     line-height: 40px;
   }
-  
+}
+
+@media only screen and (min-width: 900px) {
+  .about {
+    padding-bottom: 168px;
+  }
+
+  .about__wrapper {
+    padding-top: 137px;
+    padding-bottom: 137px;
+    padding-left: 85px;
+    background-image: url("./images/desktopaboutherobg.png");
+    background-size: cover;
+  }
+
+  .about__textbox {
+    max-width: 445px;
+    width: 100%;
+  }
+
+  .about__title {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .about__text {
+    font-size: 16px;
+    line-height: 26px;
+  }
 }
